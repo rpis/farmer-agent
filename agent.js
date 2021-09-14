@@ -155,6 +155,9 @@ const logger = new winston.createLogger(myWinstonOptions);
     }
 
     const req = https.request(options, res => {
+      if (res.statusCode!=200){
+        console.log("Not defined farm_name. Check it!")
+      }
     })
     
     req.on('error', error => {
