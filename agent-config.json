@@ -1,5 +1,6 @@
 {
-    "host": "farmer-api.xiteo.usermd.net",
+    "host": "127.0.0.1",
+    "apiKey": "",
     "farms":[
         {
             "farm_name" : "farm1",

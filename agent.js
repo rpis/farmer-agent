@@ -7,7 +7,6 @@ const https = require('https');
 
 const { exit } = require("process");
 
-//var CONFIG = require("./agent-config.json");
 if (process.argv.length<3){
   console.log("Pass config file path as parameter");
   console.log("ex. node agent.js config.json");
@@ -63,16 +62,16 @@ const logger = new winston.createLogger(myWinstonOptions);
     } catch (e) {
       console.log("farmer error");
       console.log(e);
-      if (e.code == "ECONNREFUSED") {
-        console.log("Not available");
+      //if (e.code == "ECONNREFUSED") {
+        console.log("Not available connection to node");
         farm_state.state = 10;
         farm_state.full_node_state = 10;
         farm_state.sync_progress_height = 0;
         farm_state.sync_tip_height = 0;
         farm_state.space = 0;
-      } else {
-        process.exit();
-      }
+      //} else {
+      //  process.exit();
+      //}
     }
     try {
       var agent = null;
@@ -104,13 +103,13 @@ const logger = new winston.createLogger(myWinstonOptions);
     } catch (e) {
       console.log("farmer error");
       console.log(e);
-      if (e.code == "ECONNREFUSED") {
-        console.log("Not available");
+      //if (e.code == "ECONNREFUSED") {
+        console.log("Not available connection to farmer");
         farm_state.farmer_state = 10;
         farm_state.plots = 0;
-      } else {
-        process.exit();
-      }
+      //} else {
+      //  process.exit();
+      //}
     }
 
     /*var host = {};
@@ -150,11 +149,16 @@ const logger = new winston.createLogger(myWinstonOptions);
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Content-Length': data.length
+        'Content-Length': data.length,
+        'authorization' : 'ApiKey '+CONFIG.apiKey,
+
       }
     }
 
     const req = https.request(options, res => {
+      if (res.statusCode==401){
+        console.log("Not allowed access. Check your ApiKey in configurattion!")
+      } else
       if (res.statusCode!=200){
         console.log("Not defined farm_name. Check it!")
       }
