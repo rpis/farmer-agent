@@ -32,7 +32,7 @@ Edit it.
 
 * host - address of Farmer Wallet Agent Service
 * apiKey - key  generated in mobile application
-* farms - definitionsof your farm  (one or more) to monitoring
+* farms - definitions of your farm  (one or more) to monitoring
 
 * farm_name - name ofg your farm defined in application
 * protocol - usually https
@@ -49,9 +49,9 @@ cd farmer-agent
 npm install
 
 run:
-node agent.js ./config.js
+node agent.js ./config.json
 
 or by using  forever service:
 npm install forever -g
 
-forever agent.js ./config.js
+forever agent.js ./config.json
