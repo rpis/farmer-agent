@@ -30,18 +30,18 @@ Edit it.
 }
 ```
 
-host - address of Farmer Wallet Agent Service
-apiKey - key  generated in mobile application
-farms - definitionsof your farm  (one or more) to monitoring
+* host - address of Farmer Wallet Agent Service
+* apiKey - key  generated in mobile application
+* farms - definitionsof your farm  (one or more) to monitoring
 
-farm_name - name ofg your farm defined in application
-protocol - usually https
-host - allowed localhost with locally accessible certs files
-ca_cert - path to fork ca_certs (defined in FORK_HOME/mainnet/config.ssl/ca/FORK_NAME_ca.crt)
-full_node_port  - rpc port of full_node (you can find it in configuration file)
-full_node_client_cert/full_node_klient_key - certificate and key in  full_node path
-farmer_port - rpc port of farmner (you can find it in configuration file)
-farmer_client_cert/farmer_client_key - certificate and key in farmer path
+* farm_name - name ofg your farm defined in application
+* protocol - usually https
+* host - allowed localhost with locally accessible certs files
+* ca_cert - path to fork ca_certs (defined in FORK_HOME/mainnet/config.ssl/ca/FORK_NAME_ca.crt)
+* full_node_port  - rpc port of full_node (you can find it in configuration file)
+* full_node_client_cert/full_node_klient_key - certificate and key in  full_node path
+* farmer_port - rpc port of farmner (you can find it in configuration file)
+* farmer_client_cert/farmer_client_key - certificate and key in farmer path
 
 # instalation and program run
 git clone + copied repository address
