@@ -43,7 +43,7 @@ Edit it.
 * farmer_port - rpc port of farmner (you can find it in configuration file)
 * farmer_client_cert/farmer_client_key - certificate and key in farmer path
 
-# instalation and program run
+# Instalation and program run
 git clone + copied repository address
 cd farmer-agent
 npm install
