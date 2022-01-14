@@ -10,7 +10,7 @@
     "farmer_port": 9971,
     "farmer_client_cert": "/.achi/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.achi/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.achi/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -26,7 +26,7 @@
     "farmer_port": 9071,
     "farmer_client_cert": "/.aedge/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.aedge/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.aedge/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -42,7 +42,7 @@
     "farmer_port": 26670,
     "farmer_client_cert": "/.apple/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.apple/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.apple/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -58,7 +58,7 @@
     "farmer_port": 16749,
     "farmer_client_cert": "/.avocado/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.avocado/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.avocado/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -74,7 +74,7 @@
     "farmer_port": 16559,
     "farmer_client_cert": "/.beernetwork/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.beernetwork/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.beernetwork/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -89,7 +89,7 @@
     "farmer_port": 1314,
     "farmer_client_cert": "/.beet/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.beet/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.beet/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -105,7 +105,7 @@
     "farmer_port": 18695,
     "farmer_client_cert": "/.btcgreen/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.btcgreen/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.btcgreen/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -121,7 +121,7 @@
     "farmer_port": 11559,
     "farmer_client_cert": "/.cactus/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.cactus/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.cactus/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -137,7 +137,7 @@
     "farmer_port": 5459,
     "farmer_client_cert": "/.cannabis/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.cannabis/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.cannabis/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -153,7 +153,7 @@
     "farmer_port": 8865,
     "farmer_client_cert": "/.chaingreen/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.chaingreen/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.chaingreen/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -185,7 +185,7 @@
     "farmer_port": 19759,
     "farmer_client_cert": "/.chives/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.chives/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.chives/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -201,7 +201,7 @@
     "farmer_port": 18136,
     "farmer_client_cert": "/.covid/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.covid/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.covid/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -217,7 +217,7 @@
     "farmer_port": 16799,
     "farmer_client_cert": "/.cryptodoge/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.cryptodoge/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.cryptodoge/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -233,7 +233,7 @@
     "farmer_port": 16759,
     "farmer_client_cert": "/.dogechia/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.dogechia/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.dogechia/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -249,7 +249,7 @@
     "farmer_port": 9759,
     "farmer_client_cert": "/.equality/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.equality/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.equality/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -265,7 +265,7 @@
     "farmer_port": 6759,
     "farmer_client_cert": "/.flax/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.flax/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.flax/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -281,7 +281,7 @@
     "farmer_port": 18759,
     "farmer_client_cert": "/.flora/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.flora/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.flora/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -297,7 +297,7 @@
     "farmer_port": 16525,
     "farmer_client_cert": "/.fork/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.fork/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.fork/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -313,7 +313,7 @@
     "farmer_port": 7559,
     "farmer_client_cert": "/.goji-blockchain/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.goji-blockchain/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.goji-blockchain/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -329,7 +329,7 @@
     "farmer_port": 7489,
     "farmer_client_cert": "/.goldcoin/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.goldcoin/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.goldcoin/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -345,7 +345,7 @@
     "farmer_port": 6659,
     "farmer_client_cert": "/.greendoge/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.greendoge/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.greendoge/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -361,7 +361,7 @@
     "farmer_port": 28559,
     "farmer_client_cert": "/.hddcoin/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.hddcoin/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.hddcoin/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -377,7 +377,7 @@
     "farmer_port": 6459,
     "farmer_client_cert": "/.kale/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.kale/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.kale/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -393,7 +393,7 @@
     "farmer_port": 16659,
     "farmer_client_cert": "/.lucky/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.lucky/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.lucky/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -409,7 +409,7 @@
     "farmer_port": 8659,
     "farmer_client_cert": "/.maize/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.maize/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.maize/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -425,7 +425,7 @@
     "farmer_port": 2559,
     "farmer_client_cert": "/.melati//mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.melati/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.melati/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -441,7 +441,7 @@
     "farmer_port": 4489,
     "farmer_client_cert": "/.melon/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.melon/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.melon/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -457,7 +457,7 @@
     "farmer_port": 29339,
     "farmer_client_cert": "/.mint/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.mint/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.mint/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -473,7 +473,7 @@
     "farmer_port": 38559,
     "farmer_client_cert": "/.chia/ext9/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.chia/ext9/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.chia/ext9/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -489,7 +489,7 @@
     "farmer_port": 7459,
     "farmer_client_cert": "/.olive/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.olive/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.olive/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -505,7 +505,7 @@
     "farmer_port": 16349,
     "farmer_client_cert": "/.pipscoin/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.pipscoin/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.pipscoin/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -521,7 +521,7 @@
     "farmer_port": 8459,
     "farmer_client_cert": "/.chiarose/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.chiarose/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.chiarose/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -537,7 +537,7 @@
     "farmer_port": 18540,
     "farmer_client_cert": "/.salvia/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.salvia/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.salvia/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -553,7 +553,7 @@
     "farmer_port": 9773,
     "farmer_client_cert": "/.scam/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.scam/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.scam/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -569,7 +569,7 @@
     "farmer_port": 5559,
     "farmer_client_cert": "/.sector/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.sector/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.sector/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -585,7 +585,7 @@
     "farmer_port": 18559,
     "farmer_client_cert": "/.seno2/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.seno2/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.seno2/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -601,7 +601,7 @@
     "farmer_port": 11559,
     "farmer_client_cert": "/.sit/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.sit/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.sit/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -617,7 +617,7 @@
     "farmer_port": 9992,
     "farmer_client_cert": "/.skynet/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.skynet/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.skynet/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -633,7 +633,7 @@
     "farmer_port": 58559,
     "farmer_client_cert": "/.socks/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.socks/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.socks/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -649,7 +649,7 @@
     "farmer_port": 9559,
     "farmer_client_cert": "/.spare-blockchain/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.spare-blockchain/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.spare-blockchain/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -665,7 +665,7 @@
     "farmer_port": 1489,
     "farmer_client_cert": "/.staicoin/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.staicoin/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.staicoin/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -681,7 +681,7 @@
     "farmer_port": 8553,
     "farmer_client_cert": "/.stor/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.stor/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.stor/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -697,7 +697,7 @@
     "farmer_port": 18736,
     "farmer_client_cert": "/.taco/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.taco/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.taco/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -713,7 +713,7 @@
     "farmer_port": 4457,
     "farmer_client_cert": "/.tad/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.tad/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.tad/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -729,7 +729,7 @@
     "farmer_port": 8650,
     "farmer_client_cert": "/.tranzact/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.tranzact/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.tranzact/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -745,7 +745,7 @@
     "farmer_port": 5859,
     "farmer_client_cert": "/.venidium/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.venidium/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.venidium/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   },
@@ -761,7 +761,7 @@
     "farmer_port": 21559,
     "farmer_client_cert": "/.wheat/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.wheat/mainnet/config/ssl/farmer/private_farmer.key",
-    "log_file": "/.chia/mainnet/log/debug.log",
+    "log_file": "/.wheat/mainnet/log/debug.log",
     "mask": ". Time: \\d.\\d*",
     "rm": ". Time: "
   }
