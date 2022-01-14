@@ -44,17 +44,21 @@ function getAndClearScan(farm_name){
     return {
       min: 0,
       max: 0,
-      avg: 0
+      avg: 0,
+      errors: 0,
+      count:0
     };
   var min=99999;
   var max=0;
   var avg=0;
   var counter =0;
   var sum = 0;
+  var errors =0;
   for (var scan_time of farm.monitoring)
   {
     if (scan_time<min) min = scan_time;
     if (scan_time>max) max = scan_time;
+    if (scan_time> 5) errors++;
     sum = sum +  scan_time;
     counter++;
   }
@@ -64,7 +68,9 @@ function getAndClearScan(farm_name){
   return {
     min: min,
     max: max,
-    avg: avg
+    avg: avg,
+    errors: errors,
+    count: counter
   };
 }
 
@@ -138,7 +144,6 @@ function processConfiguration(farms) {
   initTails(farms);
   while (true) {
     farms.forEach(async (farm) => {
-      console.log(farm.ca_cert);
       var farm_state = {};
       farm_state.farmName = farm.farm_name;
       // get chia node status
@@ -217,6 +222,8 @@ function processConfiguration(farms) {
       farm_state.checkMin = scan_times.min;
       farm_state.checkMax = scan_times.max;
       farm_state.checkAvg = scan_times.avg;
+      farm_state.checkErrors = scan_times.errors;
+      farm_state.checkCount = scan_times.count;
       //service call
       const data = JSON.stringify(farm_state);
 
