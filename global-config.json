@@ -1,0 +1,627 @@
+[
+  {
+    "type": "achi",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.achi/mainnet/config/ssl/ca/achi_ca.crt",
+    "full_node_port": 9965,
+    "full_node_client_cert": "/.achi/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.achi/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 9971,
+    "farmer_client_cert": "/.achi/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.achi/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "aedge",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.aedge/mainnet/config/ssl/ca/aedge_ca.crt",
+    "full_node_port": 9067,
+    "full_node_client_cert": "/.aedge/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.aedge/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 9071,
+    "farmer_client_cert": "/.aedge/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.aedge/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "apple",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.apple/mainnet/config/ssl/ca/apple_ca.crt",
+    "full_node_port": 26665,
+    "full_node_client_cert": "/.apple/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.apple/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 26670,
+    "farmer_client_cert": "/.apple/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.apple/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "avocado",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.avocado/mainnet/config/ssl/ca/avocado_ca.crt",
+    "full_node_port": 7544,
+    "full_node_client_cert": "/.avocado/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.avocado/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 16749,
+    "farmer_client_cert": "/.avocado/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.avocado/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "beer",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.beernetwork/mainnet/config/ssl/ca/beer_ca.crt",
+    "full_node_port": 15596,
+    "full_node_client_cert": "/.beernetwork/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.beernetwork/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 16559,
+    "farmer_client_cert": "/.beernetwork/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.beernetwork/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+  {
+    "type": "beet",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.beet/mainnet/config/ssl/ca/beet_ca.crt",
+    "full_node_port": 9981,
+    "full_node_client_cert": "/.beet/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.beet/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 1314,
+    "farmer_client_cert": "/.beet/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.beet/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "btcgreen",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.btcgreen/mainnet/config/ssl/ca/btcgreen_ca.crt",
+    "full_node_port": 18942,
+    "full_node_client_cert": "/.btcgreen/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.btcgreen/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 18695,
+    "farmer_client_cert": "/.btcgreen/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.btcgreen/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "cactus",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.cactus/mainnet/config/ssl/ca/cactus_ca.crt",
+    "full_node_port": 11555,
+    "full_node_client_cert": "/.cactus/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.cactus/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 11559,
+    "farmer_client_cert": "/.cactus/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.cactus/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "cannabis",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.cannabis/mainnet/config/ssl/ca/cannabis_ca.crt",
+    "full_node_port": 5540,
+    "full_node_client_cert": "/.cannabis/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.cannabis/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 5459,
+    "farmer_client_cert": "/.cannabis/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.cannabis/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "chaingreen",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.chaingreen/mainnet/config/ssl/ca/chaingreen_ca.crt",
+    "full_node_port": 8856,
+    "full_node_client_cert": "/.chaingreen/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.chaingreen/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 8865,
+    "farmer_client_cert": "/.chaingreen/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.chaingreen/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "chia",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.chia/mainnet/config/ssl/ca/chia_ca.crt",
+    "full_node_port": 8555,
+    "full_node_client_cert": "/.chia/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.chia/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 8559,
+    "farmer_client_cert": "/.chia/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.chia/mainnet/config/ssl/farmer/private_farmer.key",
+    "log_file": "/.chia/mainnet/log/debug.log",
+    "mask": "/. Time \\d.\\d*/g",
+    "rm": ""
+  },
+
+  {
+    "type": "chives",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.chives/mainnet/config/ssl/ca/chives_ca.crt",
+    "full_node_port": 9755,
+    "full_node_client_cert": "/.chives/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.chives/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 19759,
+    "farmer_client_cert": "/.chives/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.chives/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "covid",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.covid/mainnet/config/ssl/ca/covid_ca.crt",
+    "full_node_port": 18135,
+    "full_node_client_cert": "/.covid/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.covid/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 18136,
+    "farmer_client_cert": "/.covid/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.covid/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "cryptodoge",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.cryptodoge/mainnet/config/ssl/ca/cryptodoge_ca.crt",
+    "full_node_port": 16795,
+    "full_node_client_cert": "/.cryptodoge/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.cryptodoge/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 16799,
+    "farmer_client_cert": "/.cryptodoge/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.cryptodoge/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "dogechia",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.dogechia/mainnet/config/ssl/ca/dogechia_ca.crt",
+    "full_node_port": 6769,
+    "full_node_client_cert": "/.dogechia/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.dogechia/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 16759,
+    "farmer_client_cert": "/.dogechia/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.dogechia/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "equality",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.equality/mainnet/config/ssl/ca/equality_ca.crt",
+    "full_node_port": 9547,
+    "full_node_client_cert": "/.equality/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.equality/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 9759,
+    "farmer_client_cert": "/.equality/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.equality/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "flax",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.flax/mainnet/config/ssl/ca/flax_ca.crt",
+    "full_node_port": 6755,
+    "full_node_client_cert": "/.flax/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.flax/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 6759,
+    "farmer_client_cert": "/.flax/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.flax/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "flora",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.flora/mainnet/config/ssl/ca/flora_ca.crt",
+    "full_node_port": 18755,
+    "full_node_client_cert": "/.flora/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.flora/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 18759,
+    "farmer_client_cert": "/.flora/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.flora/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "fork",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.fork/mainnet/config/ssl/ca/fork_ca.crt",
+    "full_node_port": 16500,
+    "full_node_client_cert": "/.fork/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.fork/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 16525,
+    "farmer_client_cert": "/.fork/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.fork/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "goji",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.goji-blockchain/mainnet/config/ssl/ca/goji_ca.crt",
+    "full_node_port": 7555,
+    "full_node_client_cert": "/.goji-blockchain/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.goji-blockchain/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 7559,
+    "farmer_client_cert": "/.goji-blockchain/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.goji-blockchain/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "goldcoin",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.goldcoin/mainnet/config/ssl/ca/goldcoin_ca.crt",
+    "full_node_port": 7758,
+    "full_node_client_cert": "/.goldcoin/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.goldcoin/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 7489,
+    "farmer_client_cert": "/.goldcoin/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.goldcoin/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "greendoge",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.greendoge/mainnet/config/ssl/ca/greendoge_ca.crt",
+    "full_node_port": 6655,
+    "full_node_client_cert": "/.greendoge/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.greendoge/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 6659,
+    "farmer_client_cert": "/.greendoge/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.greendoge/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "hddcoin",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.hddcoin/mainnet/config/ssl/ca/hddcoin_ca.crt",
+    "full_node_port": 28555,
+    "full_node_client_cert": "/.hddcoin/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.hddcoin/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 28559,
+    "farmer_client_cert": "/.hddcoin/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.hddcoin/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "kale",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.kale/mainnet/config/ssl/ca/kale_ca.crt",
+    "full_node_port": 6355,
+    "full_node_client_cert": "/.kale/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.kale/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 6459,
+    "farmer_client_cert": "/.kale/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.kale/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "lucky",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.lucky/mainnet/config/ssl/ca/chia_ca.crt",
+    "full_node_port": 16655,
+    "full_node_client_cert": "/.lucky/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.lucky/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 16659,
+    "farmer_client_cert": "/.lucky/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.lucky/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "maize",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.maize/mainnet/config/ssl/ca/maize_ca.crt",
+    "full_node_port": 8655,
+    "full_node_client_cert": "/.maize/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.maize/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 8659,
+    "farmer_client_cert": "/.maize/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.maize/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "melati",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.melati/mainnet/config/ssl/ca/melati_ca.crt",
+    "full_node_port": 2555,
+    "full_node_client_cert": "/.melati//mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.melati//mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 2559,
+    "farmer_client_cert": "/.melati//mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.melati/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "melon",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.melon/mainnet/config/ssl/ca/melon_ca.crt",
+    "full_node_port": 4758,
+    "full_node_client_cert": "/.melon/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.melon/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 4489,
+    "farmer_client_cert": "/.melon/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.melon/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "mint",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.mint/mainnet/config/ssl/ca/mint_ca.crt",
+    "full_node_port": 29333,
+    "full_node_client_cert": "/.mint/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.mint/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 29339,
+    "farmer_client_cert": "/.mint/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.mint/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "nchain",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.chia/ext9/config/ssl/ca/chia_ca.crt",
+    "full_node_port": 38555,
+    "full_node_client_cert": "/.chia/ext9/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.chia/ext9/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 38559,
+    "farmer_client_cert": "/.chia/ext9/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.chia/ext9/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "olive",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.olive/mainnet/config/ssl/ca/olive_ca.crt",
+    "full_node_port": 7558,
+    "full_node_client_cert": "/.olive/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.olive/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 7459,
+    "farmer_client_cert": "/.olive/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.olive/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "pipscoin",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.pipscoin/mainnet/config/ssl/ca/pipscoin_ca.crt",
+    "full_node_port": 18868,
+    "full_node_client_cert": "/.pipscoin/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.pipscoin/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 16349,
+    "farmer_client_cert": "/.pipscoin/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.pipscoin/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "rose",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.chiarose/mainnet/config/ssl/ca/chia_ca.crt",
+    "full_node_port": 8025,
+    "full_node_client_cert": "/.chiarose/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.chiarose/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 8459,
+    "farmer_client_cert": "/.chiarose/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.chiarose/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "salvia",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.salvia/mainnet/config/ssl/ca/salvia_ca.crt",
+    "full_node_port": 18530,
+    "full_node_client_cert": "/.salvia/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.salvia/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 18540,
+    "farmer_client_cert": "/.salvia/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.salvia/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "scam",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.scam/mainnet/config/ssl/ca/scam_ca.crt",
+    "full_node_port": 9655,
+    "full_node_client_cert": "/.scam/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.scam/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 9773,
+    "farmer_client_cert": "/.scam/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.scam/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "sector",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.sector/mainnet/config/ssl/ca/chia_ca.crt",
+    "full_node_port": 5555,
+    "full_node_client_cert": "/.sector/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.sector/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 5559,
+    "farmer_client_cert": "/.sector/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.sector/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "seno",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.seno2/mainnet/config/ssl/ca/seno2_ca.crt",
+    "full_node_port": 18555,
+    "full_node_client_cert": "/.seno2/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.seno2/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 18559,
+    "farmer_client_cert": "/.seno2/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.seno2/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "silicoin",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.sit/mainnet/config/ssl/ca/chia_ca.crt",
+    "full_node_port": 11555,
+    "full_node_client_cert": "/.sit/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.sit/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 11559,
+    "farmer_client_cert": "/.sit/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.sit/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "skynet",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.skynet/mainnet/config/ssl/ca/skynet_ca.crt",
+    "full_node_port": 9989,
+    "full_node_client_cert": "/.skynet/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.skynet/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 9992,
+    "farmer_client_cert": "/.skynet/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.skynet/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "socks",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.socks/mainnet/config/ssl/ca/socks_ca.crt",
+    "full_node_port": 58455,
+    "full_node_client_cert": "/.socks/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.socks/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 58559,
+    "farmer_client_cert": "/.socks/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.socks/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "spare",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.spare-blockchain/mainnet/config/ssl/ca/spare_ca.crt",
+    "full_node_port": 9555,
+    "full_node_client_cert": "/.spare-blockchain/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.spare-blockchain/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 9559,
+    "farmer_client_cert": "/.spare-blockchain/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.spare-blockchain/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "stai",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.staicoin/mainnet/config/ssl/ca/staicoin_ca.crt",
+    "full_node_port": 1758,
+    "full_node_client_cert": "/.staicoin/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.staicoin/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 1489,
+    "farmer_client_cert": "/.staicoin/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.staicoin/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "stor",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.stor/mainnet/config/ssl/ca/stor_ca.crt",
+    "full_node_port": 8155,
+    "full_node_client_cert": "/.stor/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.stor/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 8553,
+    "farmer_client_cert": "/.stor/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.stor/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "taco",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.taco/mainnet/config/ssl/ca/taco_ca.crt",
+    "full_node_port": 18735,
+    "full_node_client_cert": "/.taco/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.taco/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 18736,
+    "farmer_client_cert": "/.taco/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.taco/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "tad",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.tad/mainnet/config/ssl/ca/tad_ca.crt",
+    "full_node_port": 4555,
+    "full_node_client_cert": "/.tad/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.tad/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 4457,
+    "farmer_client_cert": "/.tad/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.tad/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "tranzact",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.tranzact/mainnet/config/ssl/ca/tranzact_ca.crt",
+    "full_node_port": 8673,
+    "full_node_client_cert": "/.tranzact/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.tranzact/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 8650,
+    "farmer_client_cert": "/.tranzact/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.tranzact/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "venidium",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.venidium/mainnet/config/ssl/ca/venidium_ca.crt",
+    "full_node_port": 5855,
+    "full_node_client_cert": "/.venidium/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.venidium/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 5859,
+    "farmer_client_cert": "/.venidium/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.venidium/mainnet/config/ssl/farmer/private_farmer.key"
+  },
+
+  {
+    "type": "wheat",
+    "protocol": "https",
+    "host": "localhost",
+    "ca_cert": "/.wheat/mainnet/config/ssl/ca/wheat_ca.crt",
+    "full_node_port": 21556,
+    "full_node_client_cert": "/.wheat/mainnet/config/ssl/full_node/private_full_node.crt",
+    "full_node_client_key": "/.wheat/mainnet/config/ssl/full_node/private_full_node.key",
+    "farmer_port": 21559,
+    "farmer_client_cert": "/.wheat/mainnet/config/ssl/farmer/private_farmer.crt",
+    "farmer_client_key": "/.wheat/mainnet/config/ssl/farmer/private_farmer.key"
+  }
+]

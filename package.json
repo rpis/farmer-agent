@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "dependencies": {
-        "chia-agent": "^2.0.3"
+        "chia-agent": "^2.0.3",
+        "tail": "^2.2.4"
     }
 }

@@ -1,0 +1,19 @@
+{
+    "host": "farmer-agent.xiteo.usermd.net",
+    "apiKey": "",
+    "farms":[
+        {
+            "farm_name" : "farm1",
+            "type": "chia",
+            "home_dir":"/Users/rafal",
+            "monitor_scan_time": true
+
+        },
+        {
+            "farm_name" : "farm2",
+            "type": "chia",
+            "home_dir":"/Users/rafal",
+            "monitor_scan_time": true
+        }
+    ]
+}

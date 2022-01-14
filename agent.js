@@ -2,9 +2,10 @@ const { RPCAgent } = require("chia-agent");
 const { get_blockchain_state } = require("chia-agent/api/rpc/full_node");
 const { get_harvesters } = require("chia-agent/api/rpc/farmer");
 const fs = require("fs");
-const https = require("https");
-
-const { exit } = require("process");
+const https = require("http");
+const { exit, config } = require("process");
+var GLOBAL_CONFIG = require("./global-config.json");
+Tail = require("tail").Tail;
 
 if (process.argv.length < 3) {
   console.log("Pass config file path as parameter");
@@ -13,13 +14,132 @@ if (process.argv.length < 3) {
 }
 console.log("Config file :" + process.argv[2]);
 var CONFIG = require(process.argv[2]);
+var farms = CONFIG.farms;
 
+function findConfigurationByType(type) {
+  for (var config of GLOBAL_CONFIG) {
+    if (config.type == type) return config;
+  }
+  return null;
+}
+
+function findFarmByName(name) {
+  for (var farm of farms) {
+    if (farm.farm_name == name) return farm;
+  }
+  return null;
+}
+
+
+function saveScan(farm_name, time){
+  var farm = findFarmByName(farm_name);
+  if (farm.monitoring == undefined)
+    farm.monitoring = []
+  farm.monitoring.push(time)
+}
+
+function getAndClearScan(farm_name){
+  var farm = findFarmByName(farm_name);
+  if (farm.monitoring == undefined)
+    return {
+      min: 0,
+      max: 0,
+      avg: 0
+    };
+  var min=99999;
+  var max=0;
+  var avg=0;
+  var counter =0;
+  var sum = 0;
+  for (var scan_time of farm.monitoring)
+  {
+    if (scan_time<min) min = scan_time;
+    if (scan_time>max) max = scan_time;
+    sum = sum +  scan_time;
+    counter++;
+  }
+  avg = sum / counter;
+  farm.monitoring = [];
+
+  return {
+    min: min,
+    max: max,
+    avg: avg
+  };
+}
+
+function initTails(farms) {
+  for (var farm of farms) {
+    if (farm.type != undefined && farm.home_dir != undefined) {
+      farm.home_dir =
+        farm.home_dir.endsWith("/") || farm.home_dir.endsWith("\\")
+          ? farm.home_dir.slice(0, -1)
+          : farm.home_dir;
+      global_config = findConfigurationByType(farm.type);
+      if (farm.monitor_scan_time) {
+        farm.tail = new Tail(farm.home_dir + global_config.log_file);
+        farm.tail.farm_name = farm.farm_name
+        farm.tail.on("line", function (data) {
+          console.log( this.farm_name +" "+ data);
+          const mask = farm.mask;
+          var ret = data.match(mask);
+          if (ret != null) {
+            saveScan(this.farm_name, ret[0])
+          };
+        });
+      }
+    }
+  }
+}
+
+function processConfiguration(farms) {
+  for (var farm of farms) {
+    console.log("processing farm " + farm.farm_name);
+    if (farm.type != undefined && farm.home_dir != undefined) {
+      farm.home_dir =
+        farm.home_dir.endsWith("/") || farm.home_dir.endsWith("\\")
+          ? farm.home_dir.slice(0, -1)
+          : farm.home_dir;
+      global_config = findConfigurationByType(farm.type);
+      if (global_config == null) {
+        console.log("Unknown farm type " + farm.type);
+        exit(0);
+      }
+      if (farm.protocol == undefined) farm.protocol = global_config.protocol;
+      if (farm.host == undefined) farm.host = global_config.host;
+      if (farm.ca_cert == undefined)
+        farm.ca_cert = farm.home_dir + global_config.ca_cert;
+      if (farm.full_node_port == undefined)
+        farm.full_node_port = global_config.full_node_port;
+      if (farm.full_node_client_cert == undefined)
+        farm.full_node_client_cert =
+          farm.home_dir + global_config.full_node_client_cert;
+      if (farm.full_node_client_key == undefined)
+        farm.full_node_client_key =
+          farm.home_dir + global_config.full_node_client_key;
+      if (farm.farmer_port == undefined)
+        farm.farmer_port = global_config.farmer_port;
+      if (farm.farmer_client_cert == undefined)
+        farm.farmer_client_cert =
+          farm.home_dir + global_config.farmer_client_cert;
+      if (farm.farmer_client_key == undefined)
+        farm.farmer_client_key =
+          farm.home_dir + global_config.farmer_client_key;
+
+      console.log(farm.ca_cert);
+    }
+  }
+  return farms;
+}
 (async () => {
-  var farms = CONFIG.farms;
+
+  farms = processConfiguration(farms);
+  initTails(farms);
   while (true) {
     farms.forEach(async (farm) => {
+      console.log(farm.ca_cert);
       var farm_state = {};
-      farm_state.farm_name = farm.farm_name;
+      farm_state.farmName = farm.farm_name;
       // get chia node status
       try {
         var agent = null;
@@ -41,11 +161,11 @@ var CONFIG = require(process.argv[2]);
         const response = await get_blockchain_state(agent);
         farm_state.state =
           response.blockchain_state.sync.synced == true ? 30 : 20;
-        farm_state.full_node_state =
+        farm_state.fullNodeState =
           response.blockchain_state.sync.synced == true ? 30 : 20;
-        farm_state.sync_progress_height =
+        farm_state.syncProgressHeight =
           response.blockchain_state.sync.sync_progress_height;
-        farm_state.sync_tip_height =
+        farm_state.syncTipHeight =
           response.blockchain_state.sync.sync_tip_height;
         farm_state.space = response.blockchain_state.space;
       } catch (e) {
@@ -53,9 +173,9 @@ var CONFIG = require(process.argv[2]);
         console.log(e);
         console.log("Not available connection to node");
         farm_state.state = 10;
-        farm_state.full_node_state = 10;
-        farm_state.sync_progress_height = 0;
-        farm_state.sync_tip_height = 0;
+        farm_state.fullNodeState = 10;
+        farm_state.syncProgressHeight = 0;
+        farm_state.syncTipHeight = 0;
         farm_state.space = 0;
       }
       try {
@@ -81,23 +201,28 @@ var CONFIG = require(process.argv[2]);
         response.harvesters.forEach((harverster) => {
           plots += harverster.plots.length;
         });
-        farm_state.farmer_state = 30;
+        farm_state.farmerState = 30;
         farm_state.plots = plots;
       } catch (e) {
         console.log("farmer error");
         console.log(e);
         console.log("Not available connection to farmer");
-        farm_state.farmer_state = 10;
+        farm_state.farmerState = 10;
         farm_state.plots = 0;
-
       }
 
+      //scans 
+      var scan_times = getAndClearScan(farm.farm_name);
+      farm_state.checkMin = scan_times.min;
+      farm_state.checkMax = scan_times.max;
+      farm_state.checkAvg = scan_times.avg;
       //service call
       const data = JSON.stringify(farm_state);
 
       const options = {
         hostname: CONFIG.host,
-        path: "/farm/status",
+        port: 3000,
+        path: "/v1/farm/status",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
