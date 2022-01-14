@@ -1,6 +1,6 @@
 [
   {
-    "type": "achi",
+    "type": "xach",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.achi/mainnet/config/ssl/ca/achi_ca.crt",
@@ -16,7 +16,7 @@
   },
 
   {
-    "type": "aedge",
+    "type": "aec",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.aedge/mainnet/config/ssl/ca/aedge_ca.crt",
@@ -48,7 +48,7 @@
   },
 
   {
-    "type": "avocado",
+    "type": "avo",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.avocado/mainnet/config/ssl/ca/avocado_ca.crt",
@@ -64,7 +64,7 @@
   },
 
   {
-    "type": "beer",
+    "type": "xbr",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.beernetwork/mainnet/config/ssl/ca/beer_ca.crt",
@@ -79,7 +79,7 @@
     "rm": ". Time: "
   },
   {
-    "type": "beet",
+    "type": "xbt",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.beet/mainnet/config/ssl/ca/beet_ca.crt",
@@ -95,7 +95,7 @@
   },
 
   {
-    "type": "btcgreen",
+    "type": "xbtc",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.btcgreen/mainnet/config/ssl/ca/btcgreen_ca.crt",
@@ -111,7 +111,7 @@
   },
 
   {
-    "type": "cactus",
+    "type": "cac",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.cactus/mainnet/config/ssl/ca/cactus_ca.crt",
@@ -127,7 +127,7 @@
   },
 
   {
-    "type": "cannabis",
+    "type": "cans",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.cannabis/mainnet/config/ssl/ca/cannabis_ca.crt",
@@ -143,7 +143,7 @@
   },
 
   {
-    "type": "chaingreen",
+    "type": "cgn",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.chaingreen/mainnet/config/ssl/ca/chaingreen_ca.crt",
@@ -159,7 +159,7 @@
   },
 
   {
-    "type": "chia",
+    "type": "xch",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.chia/mainnet/config/ssl/ca/chia_ca.crt",
@@ -175,7 +175,7 @@
   },
 
   {
-    "type": "chives",
+    "type": "xcc",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.chives/mainnet/config/ssl/ca/chives_ca.crt",
@@ -191,7 +191,7 @@
   },
 
   {
-    "type": "covid",
+    "type": "cov",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.covid/mainnet/config/ssl/ca/covid_ca.crt",
@@ -207,7 +207,7 @@
   },
 
   {
-    "type": "cryptodoge",
+    "type": "xcd",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.cryptodoge/mainnet/config/ssl/ca/cryptodoge_ca.crt",
@@ -223,7 +223,7 @@
   },
 
   {
-    "type": "dogechia",
+    "type": "xdg",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.dogechia/mainnet/config/ssl/ca/dogechia_ca.crt",
@@ -239,7 +239,7 @@
   },
 
   {
-    "type": "equality",
+    "type": "xeq",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.equality/mainnet/config/ssl/ca/equality_ca.crt",
@@ -255,7 +255,7 @@
   },
 
   {
-    "type": "flax",
+    "type": "xfx",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.flax/mainnet/config/ssl/ca/flax_ca.crt",
@@ -271,7 +271,7 @@
   },
 
   {
-    "type": "flora",
+    "type": "xfl",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.flora/mainnet/config/ssl/ca/flora_ca.crt",
@@ -287,7 +287,7 @@
   },
 
   {
-    "type": "fork",
+    "type": "xfk",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.fork/mainnet/config/ssl/ca/fork_ca.crt",
@@ -303,7 +303,7 @@
   },
 
   {
-    "type": "goji",
+    "type": "xgj",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.goji-blockchain/mainnet/config/ssl/ca/goji_ca.crt",
@@ -319,7 +319,7 @@
   },
 
   {
-    "type": "goldcoin",
+    "type": "ozt",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.goldcoin/mainnet/config/ssl/ca/goldcoin_ca.crt",
@@ -335,7 +335,7 @@
   },
 
   {
-    "type": "greendoge",
+    "type": "gdog",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.greendoge/mainnet/config/ssl/ca/greendoge_ca.crt",
@@ -351,7 +351,7 @@
   },
 
   {
-    "type": "hddcoin",
+    "type": "hdd",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.hddcoin/mainnet/config/ssl/ca/hddcoin_ca.crt",
@@ -367,7 +367,7 @@
   },
 
   {
-    "type": "kale",
+    "type": "xka",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.kale/mainnet/config/ssl/ca/kale_ca.crt",
@@ -383,7 +383,7 @@
   },
 
   {
-    "type": "lucky",
+    "type": "six",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.lucky/mainnet/config/ssl/ca/chia_ca.crt",
@@ -399,7 +399,7 @@
   },
 
   {
-    "type": "maize",
+    "type": "xmz",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.maize/mainnet/config/ssl/ca/maize_ca.crt",
@@ -415,7 +415,7 @@
   },
 
   {
-    "type": "melati",
+    "type": "xmx",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.melati/mainnet/config/ssl/ca/melati_ca.crt",
@@ -447,7 +447,7 @@
   },
 
   {
-    "type": "mint",
+    "type": "xkm",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.mint/mainnet/config/ssl/ca/mint_ca.crt",
@@ -463,7 +463,7 @@
   },
 
   {
-    "type": "nchain",
+    "type": "nch",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.chia/ext9/config/ssl/ca/chia_ca.crt",
@@ -479,7 +479,7 @@
   },
 
   {
-    "type": "olive",
+    "type": "xol",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.olive/mainnet/config/ssl/ca/olive_ca.crt",
@@ -495,7 +495,7 @@
   },
 
   {
-    "type": "pipscoin",
+    "type": "pips",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.pipscoin/mainnet/config/ssl/ca/pipscoin_ca.crt",
@@ -511,7 +511,7 @@
   },
 
   {
-    "type": "rose",
+    "type": "xcr",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.chiarose/mainnet/config/ssl/ca/chia_ca.crt",
@@ -527,7 +527,7 @@
   },
 
   {
-    "type": "salvia",
+    "type": "xslv",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.salvia/mainnet/config/ssl/ca/salvia_ca.crt",
@@ -543,7 +543,7 @@
   },
 
   {
-    "type": "scam",
+    "type": "scm",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.scam/mainnet/config/ssl/ca/scam_ca.crt",
@@ -559,7 +559,7 @@
   },
 
   {
-    "type": "sector",
+    "type": "xsc",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.sector/mainnet/config/ssl/ca/chia_ca.crt",
@@ -575,7 +575,7 @@
   },
 
   {
-    "type": "seno",
+    "type": "xse",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.seno2/mainnet/config/ssl/ca/seno2_ca.crt",
@@ -591,7 +591,7 @@
   },
 
   {
-    "type": "silicoin",
+    "type": "sit",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.sit/mainnet/config/ssl/ca/chia_ca.crt",
@@ -607,7 +607,7 @@
   },
 
   {
-    "type": "skynet",
+    "type": "xnt",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.skynet/mainnet/config/ssl/ca/skynet_ca.crt",
@@ -623,7 +623,7 @@
   },
 
   {
-    "type": "socks",
+    "type": "sock",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.socks/mainnet/config/ssl/ca/socks_ca.crt",
@@ -687,7 +687,7 @@
   },
 
   {
-    "type": "taco",
+    "type": "xtx",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.taco/mainnet/config/ssl/ca/taco_ca.crt",
@@ -719,7 +719,7 @@
   },
 
   {
-    "type": "tranzact",
+    "type": "trz",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.tranzact/mainnet/config/ssl/ca/tranzact_ca.crt",
@@ -735,7 +735,7 @@
   },
 
   {
-    "type": "venidium",
+    "type": "xvm",
     "protocol": "https",
     "host": "localhost",
     "ca_cert": "/.venidium/mainnet/config/ssl/ca/venidium_ca.crt",
