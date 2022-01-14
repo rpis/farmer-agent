@@ -2,7 +2,7 @@ const { RPCAgent } = require("chia-agent");
 const { get_blockchain_state } = require("chia-agent/api/rpc/full_node");
 const { get_harvesters } = require("chia-agent/api/rpc/farmer");
 const fs = require("fs");
-const https = require("http");
+const https = require("https");
 const { exit, config } = require("process");
 var GLOBAL_CONFIG = require("./global-config.json");
 Tail = require("tail").Tail;
@@ -80,11 +80,14 @@ function initTails(farms) {
         farm.tail = new Tail(farm.home_dir + global_config.log_file);
         farm.tail.farm_name = farm.farm_name
         farm.tail.on("line", function (data) {
-          console.log( this.farm_name +" "+ data);
-          const mask = farm.mask;
+        const mask = new RegExp(global_config.mask,"g");
           var ret = data.match(mask);
           if (ret != null) {
-            saveScan(this.farm_name, ret[0])
+            try {
+              saveScan(this.farm_name, Number(ret[0].replace(global_config.rm,'')));
+            } catch (e){
+              console.log("Internal conversion scan time error");
+            }
           };
         });
       }
@@ -125,8 +128,6 @@ function processConfiguration(farms) {
       if (farm.farmer_client_key == undefined)
         farm.farmer_client_key =
           farm.home_dir + global_config.farmer_client_key;
-
-      console.log(farm.ca_cert);
     }
   }
   return farms;
@@ -221,7 +222,6 @@ function processConfiguration(farms) {
 
       const options = {
         hostname: CONFIG.host,
-        port: 3000,
         path: "/v1/farm/status",
         method: "POST",
         headers: {
