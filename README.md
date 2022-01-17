@@ -16,13 +16,15 @@ Simple configuration based on global-config.json
         {
             "farm_name" : "farm1",
             "type" : "xch",
-	        "home_dir" : "/coin_home/",
+            "home_dir" : "/coin_home/",
             "monitor_scan_time": true
             "farmer_port": 8559, // optional - default from global-config.json
             "full_node_port": 8555, //optional - default from global-config.json
         }
     ]
-}```
+}
+
+```
 
 
 * host - address of Farmer Wallet Agent Service
@@ -35,6 +37,7 @@ Simple configuration based on global-config.json
 * monitor_scan_time - st to true of you need to monitor scan latency reported in log file (remember to set log_level to INFO in configuration file, for chia its ./chia/mainnet/config/config.yaml)
 
 ```
+
   logging: &id001
     log_filename: log/debug.log
     log_level: INFO
@@ -43,6 +46,7 @@ Simple configuration based on global-config.json
     log_syslog: false
     log_syslog_host: 127.0.0.1
     log_syslog_port: 514
+
 ```    
 * full_node_port  - optional rpc port of full_node (you can find it in configuration file)
 * farmer_port - optional rpc port of farmner (you can find it in configuration file)
