@@ -236,7 +236,7 @@ function processConfiguration(farms) {
               service: "wallet",
               protocol: farm.protocol,
               host: farm.host,
-              port: 9256,
+              port: farm.wallet_port,
               ca_cert: fs.readFileSync(farm.ca_cert),
               client_cert: fs.readFileSync(farm.farmer_client_cert),
               client_key: fs.readFileSync(farm.farmer_client_key),
