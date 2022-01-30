@@ -1,6 +1,7 @@
 const { RPCAgent } = require("chia-agent");
 const { get_blockchain_state } = require("chia-agent/api/rpc/full_node");
 const { get_harvesters } = require("chia-agent/api/rpc/farmer");
+const {get_wallet_balance} = require("chia-agent/api/rpc/wallet");
 const fs = require("fs");
 const https = require("https");
 const { exit, config } = require("process");
@@ -30,15 +31,13 @@ function findFarmByName(name) {
   return null;
 }
 
-
-function saveScan(farm_name, time){
+function saveScan(farm_name, time) {
   var farm = findFarmByName(farm_name);
-  if (farm.monitoring == undefined)
-    farm.monitoring = []
-  farm.monitoring.push(time)
+  if (farm.monitoring == undefined) farm.monitoring = [];
+  farm.monitoring.push(time);
 }
 
-function getAndClearScan(farm_name){
+function getAndClearScan(farm_name) {
   var farm = findFarmByName(farm_name);
   if (farm.monitoring == undefined)
     return {
@@ -46,20 +45,19 @@ function getAndClearScan(farm_name){
       max: 0,
       avg: 0,
       errors: 0,
-      count:0
+      count: 0,
     };
-  var min=99999;
-  var max=0;
-  var avg=0;
-  var counter =0;
+  var min = 99999;
+  var max = 0;
+  var avg = 0;
+  var counter = 0;
   var sum = 0;
-  var errors =0;
-  for (var scan_time of farm.monitoring)
-  {
-    if (scan_time<min) min = scan_time;
-    if (scan_time>max) max = scan_time;
-    if (scan_time> 5) errors++;
-    sum = sum +  scan_time;
+  var errors = 0;
+  for (var scan_time of farm.monitoring) {
+    if (scan_time < min) min = scan_time;
+    if (scan_time > max) max = scan_time;
+    if (scan_time > 5) errors++;
+    sum = sum + scan_time;
     counter++;
   }
   avg = sum / counter;
@@ -70,7 +68,7 @@ function getAndClearScan(farm_name){
     max: max,
     avg: avg,
     errors: errors,
-    count: counter
+    count: counter,
   };
 }
 
@@ -84,17 +82,20 @@ function initTails(farms) {
       global_config = findConfigurationByType(farm.type);
       if (farm.monitor_scan_time) {
         farm.tail = new Tail(farm.home_dir + global_config.log_file);
-        farm.tail.farm_name = farm.farm_name
+        farm.tail.farm_name = farm.farm_name;
         farm.tail.on("line", function (data) {
-        const mask = new RegExp(global_config.mask,"g");
+          const mask = new RegExp(global_config.mask, "g");
           var ret = data.match(mask);
           if (ret != null) {
             try {
-              saveScan(this.farm_name, Number(ret[0].replace(global_config.rm,'')));
-            } catch (e){
+              saveScan(
+                this.farm_name,
+                Number(ret[0].replace(global_config.rm, ""))
+              );
+            } catch (e) {
               console.log("Internal conversion scan time error");
             }
-          };
+          }
         });
       }
     }
@@ -139,7 +140,6 @@ function processConfiguration(farms) {
   return farms;
 }
 (async () => {
-
   farms = processConfiguration(farms);
   initTails(farms);
   while (true) {
@@ -216,8 +216,39 @@ function processConfiguration(farms) {
         farm_state.farmerState = 10;
         farm_state.plots = 0;
       }
+      if (farm.monitor_balance != undefined || farm.monitor_balance)
+        try {
+          var agent = null;
+          if (farm.configPath != undefined)
+            agent = new RPCAgent({
+              service: "wallet",
+              configPath: farm.configPath,
+            });
+          else
+            agent = new RPCAgent({
+              service: "wallet",
+              protocol: farm.protocol,
+              host: farm.host,
+              port: 9256,
+              ca_cert: fs.readFileSync(farm.ca_cert),
+              client_cert: fs.readFileSync(farm.farmer_client_cert),
+              client_key: fs.readFileSync(farm.farmer_client_key),
+            });
 
-      //scans 
+          const response = await get_wallet_balance(agent, {
+            wallet_id :1,
+          });
+          console.log(response);
+          farm_state.confirmedWalletBalance = response.wallet_balance.confirmed_wallet_balance
+        } catch (e) {
+          console.log("farmer error");
+          console.log(e);
+          console.log("Not available connection to farmer");
+          farm_state.confirmedWalletBalance=0;
+          farm_state.farmerState = 10;
+          farm_state.plots = 0;
+        }
+      //scans
       var scan_times = getAndClearScan(farm.farm_name);
       farm_state.checkMin = scan_times.min;
       farm_state.checkMax = scan_times.max;
