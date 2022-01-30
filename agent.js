@@ -60,7 +60,14 @@ function getAndClearScan(farm_name) {
     sum = sum + scan_time;
     counter++;
   }
-  avg = sum / counter;
+  if (counter != 0)
+  {
+    avg = sum / counter;
+  } else {
+    avg = 0;
+    min = 0;
+    max = 0;    
+  }
   farm.monitoring = [];
 
   return {

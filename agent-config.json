@@ -4,7 +4,7 @@
     "farms":[
         {
             "farm_name" : "farm1",
-            "type" : "chia",
+            "type" : "xch",
 	        "home_dir" : "/coin_home/chia",
             "monitor_scan_time": true
         }
