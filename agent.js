@@ -223,7 +223,7 @@ function processConfiguration(farms) {
         farm_state.farmerState = 10;
         farm_state.plots = 0;
       }
-      if (farm.monitor_balance != undefined || farm.monitor_balance)
+      if (farm.monitor_balance != undefined && farm.monitor_balance)
         try {
           var agent = null;
           if (farm.configPath != undefined)
@@ -251,7 +251,6 @@ function processConfiguration(farms) {
           console.log("farmer error");
           console.log(e);
           console.log("Not available connection to farmer");
-          farm_state.confirmedWalletBalance=0;
           farm_state.farmerState = 10;
           farm_state.plots = 0;
         }
