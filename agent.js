@@ -182,22 +182,21 @@ async function processConfiguration(farms) {
   for (var farm of farms) {
     console.log("processing farm " + farm.farm_name);
     var remote = findFarmByNameRemoteConfig(remote_config, farm.farm_name);
-    
+
     if (remote != null) {
       checkInterval = remote.checkInterval * 1000;
       console.log("Found remote configuration");
       if (farm.type == undefined) farm.type = remote.coinType;
-      if (farm.home_dir == undefined);
-      farm.home_dir = CONFIG.home_dir;
-      if (farm.monitor_scan_time == undefined);
-      farm.monitor_scan_time = remote.scanTimeMonitoring;
-      if (farm.monitor_balance == undefined);
-      farm.monitor_balance = remote.balanceMonitoring;
-      if (farm.monitor_node == undefined);
-      farm.monitor_node = remote.nodeMonitoring;
-      if (farm.monitor_farmer == undefined);
-      farm.monitor_farmer = remote.farmerMonitoring;
-    } else{
+      if (farm.home_dir == undefined) farm.home_dir = CONFIG.home_dir;
+      if (farm.monitor_scan_time == undefined)
+        farm.monitor_scan_time = remote.scanTimeMonitoring;
+      if (farm.monitor_balance == undefined)
+        farm.monitor_balance = remote.balanceMonitoring;
+      if (farm.monitor_node == undefined)
+        farm.monitor_node = remote.nodeMonitoring;
+      if (farm.monitor_farmer == undefined)
+        farm.monitor_farmer = remote.farmerMonitoring;
+    } else {
       console.log("Remote configuration not found");
     }
     if (farm.type != undefined && farm.home_dir != undefined) {
@@ -233,7 +232,7 @@ async function processConfiguration(farms) {
       if (farm.wallet_port == undefined)
         farm.wallet_port = global_config.wallet_port;
     }
-    console.log (farm);
+    console.log(farm);
   }
   return farms;
 }
