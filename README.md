@@ -5,26 +5,28 @@ Make own configuration file copying agent-config.json to config.json
 
 Edit it. 
 
-Simple configuration based on global-config.json
+Simple configuration based on global-config.json. This configuration get all data from your farm definition.
 
 ```
 
 {
     "host": "farmer-agent.xiteo.usermd.net",
     "apiKey": "",
-    "farms":[
-        {
-            "farm_name" : "farm1",
-            "type" : "xch",
-            "home_dir" : "/coin_home/",
-            "monitor_scan_time": true
-            "farmer_port": 8559, // optional - default from global-config.json
-            "full_node_port": 8555, //optional - default from global-config.json
-        }
-    ]
+    "home_dir" : "/coin_home/",
 }
 
 ```
+If you like to limit to one farm you can specify it like this:
+{
+    "host": "farmer-agent.xiteo.usermd.net",
+    "apiKey": "",
+    "home_dir" : "/coin_home/",
+    "farms":[
+        {
+            "farm_name" : "farm1", // name from applicatiion!
+        }
+    ]
+}
 
 
 * host - address of Farmer Wallet Agent Service
@@ -32,9 +34,9 @@ Simple configuration based on global-config.json
 * farms - definitions of your farm  (one or more) to monitoring
 
 * farm_name - name of your farm defined in application
-* type - type of farm (ex. xch for chia, sit for silicoin - find more in global-config.js)
-* home_dir - directory with coin home dir (.chia, .sit,..)
-* monitor_scan_time - set to true of you need to monitor scan latency reported in log file (remember to set log_level to INFO in configuration file, for chia its ./chia/mainnet/config/config.yaml)
+* type - type of farm (ex. xch for chia, sit for silicoin - find more in global-config.js) - optional
+* home_dir - directory with coin home dir (.chia, .sit,..) - optional
+* monitor_scan_time - set to true of you need to monitor scan latency reported in log file (remember to set log_level to INFO in configuration file, for chia its ./chia/mainnet/config/config.yaml) - optional
 
 ```
 
