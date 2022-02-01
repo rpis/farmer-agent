@@ -1,11 +1,12 @@
 const { RPCAgent } = require("chia-agent");
 const { get_blockchain_state } = require("chia-agent/api/rpc/full_node");
 const { get_harvesters } = require("chia-agent/api/rpc/farmer");
-const {get_wallet_balance} = require("chia-agent/api/rpc/wallet");
+const { get_wallet_balance } = require("chia-agent/api/rpc/wallet");
 const fs = require("fs");
 const https = require("https");
 const { exit, config } = require("process");
 var GLOBAL_CONFIG = require("./global-config.json");
+var checkInterval = 60000;
 Tail = require("tail").Tail;
 
 if (process.argv.length < 3) {
@@ -27,6 +28,13 @@ function findConfigurationByType(type) {
 function findFarmByName(name) {
   for (var farm of farms) {
     if (farm.farm_name == name) return farm;
+  }
+  return null;
+}
+
+function findFarmByNameRemoteConfig(remote_config, name) {
+  for (var farm of remote_config) {
+    if (farm.farmName == name) return farm;
   }
   return null;
 }
@@ -60,13 +68,12 @@ function getAndClearScan(farm_name) {
     sum = sum + scan_time;
     counter++;
   }
-  if (counter != 0)
-  {
+  if (counter != 0) {
     avg = sum / counter;
   } else {
     avg = 0;
     min = 0;
-    max = 0;    
+    max = 0;
   }
   farm.monitoring = [];
 
@@ -109,9 +116,90 @@ function initTails(farms) {
   }
 }
 
-function processConfiguration(farms) {
+function callService(options) {
+  return new Promise((resolve, reject) => {
+    let req = https.request(options, (res) => {
+      let output = "";
+      res.setEncoding("utf8");
+
+      res.on("data", function (chunk) {
+        output += chunk;
+      });
+
+      res.on("end", () => {
+        try {
+          let obj = JSON.parse(output);
+          resolve(obj);
+        } catch (err) {
+          reject(err);
+        }
+      });
+    });
+
+    req.on("error", (err) => {
+      reject(err);
+    });
+
+    req.end();
+  });
+}
+
+async function processConfiguration(farms) {
+  //get farm configuration from server
+  const options = {
+    host: CONFIG.host,
+    path: "/v1/farm/configuration",
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "Content-Length": 0,
+      authorization: "ApiKey " + CONFIG.apiKey,
+    },
+  };
+  var remote_config = [];
+  try {
+    remote_config = await callService(options);
+  } catch (e) {
+    console.log("Configuration connection error + " + e);
+    exit(1);
+  }
+  // if farms definition not exists build from remote
+  if (farms == undefined || farms.length == 0) {
+    for (var remote of remote_config) {
+      if (farms == undefined) farms = [];
+      if (remote.coinType == undefined) continue;
+      farms.push({
+        farm_name: remote.farmName,
+        type: remote.coinType,
+        home_dir: CONFIG.home_dir,
+        monitor_scan_time: remote.scanTimeMonitoring,
+        monitor_balance: remote.balanceMonitoring,
+        monitor_node: remote.nodeMonitoring,
+        monitor_farmer: remote.farmerMonitoring,
+      });
+    }
+  }
   for (var farm of farms) {
     console.log("processing farm " + farm.farm_name);
+    var remote = findFarmByNameRemoteConfig(remote_config, farm.farm_name);
+    
+    if (remote != null) {
+      checkInterval = remote.checkInterval * 1000;
+      console.log("Found remote configuration");
+      if (farm.type == undefined) farm.type = remote.coinType;
+      if (farm.home_dir == undefined);
+      farm.home_dir = CONFIG.home_dir;
+      if (farm.monitor_scan_time == undefined);
+      farm.monitor_scan_time = remote.scanTimeMonitoring;
+      if (farm.monitor_balance == undefined);
+      farm.monitor_balance = remote.balanceMonitoring;
+      if (farm.monitor_node == undefined);
+      farm.monitor_node = remote.nodeMonitoring;
+      if (farm.monitor_farmer == undefined);
+      farm.monitor_farmer = remote.farmerMonitoring;
+    } else{
+      console.log("Remote configuration not found");
+    }
     if (farm.type != undefined && farm.home_dir != undefined) {
       farm.home_dir =
         farm.home_dir.endsWith("/") || farm.home_dir.endsWith("\\")
@@ -142,12 +230,16 @@ function processConfiguration(farms) {
       if (farm.farmer_client_key == undefined)
         farm.farmer_client_key =
           farm.home_dir + global_config.farmer_client_key;
+      if (farm.wallet_port == undefined)
+        farm.wallet_port = global_config.wallet_port;
     }
+    console.log (farm);
   }
   return farms;
 }
 (async () => {
-  farms = processConfiguration(farms);
+  farms = await processConfiguration(farms);
+  console.log("End config");
   initTails(farms);
   while (true) {
     farms.forEach(async (farm) => {
@@ -243,10 +335,11 @@ function processConfiguration(farms) {
             });
 
           const response = await get_wallet_balance(agent, {
-            wallet_id :1,
+            wallet_id: 1,
           });
           console.log(response);
-          farm_state.confirmedWalletBalance = response.wallet_balance.confirmed_wallet_balance
+          farm_state.confirmedWalletBalance =
+            response.wallet_balance.confirmed_wallet_balance;
         } catch (e) {
           console.log("farmer error");
           console.log(e);
@@ -296,7 +389,7 @@ function processConfiguration(farms) {
       }
       console.log(farm_state);
     });
-    await sleep(60000);
+    await sleep(checkInterval);
   }
 })();
 
