@@ -1,12 +1,10 @@
 {
     "host": "farmer-agent.xiteo.usermd.net",
     "apiKey": "",
+    "home_dir" : "/coin_home/chia",
     "farms":[
         {
             "farm_name" : "farm1",
-            "type" : "xch",
-	        "home_dir" : "/coin_home/chia",
-            "monitor_scan_time": true
         }
     ]
 }
