@@ -17,6 +17,9 @@ Simple configuration based on global-config.json. This configuration get all dat
 
 ```
 If you like to limit to one farm you can specify it like this:
+
+
+```
 {
     "host": "farmer-agent.xiteo.usermd.net",
     "apiKey": "",
@@ -27,6 +30,7 @@ If you like to limit to one farm you can specify it like this:
         }
     ]
 }
+```
 
 
 * host - address of Farmer Wallet Agent Service
