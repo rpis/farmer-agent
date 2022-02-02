@@ -699,7 +699,7 @@
     "type": "stai",
     "protocol": "https",
     "host": "localhost",
-    "ca_cert": "/.staicoin/mainnet/config/ssl/ca/staicoin_ca.crt",
+    "ca_cert": "/.stai/mainnet/config/ssl/ca/staicoin_ca.crt",
     "full_node_port": 1758,
     "full_node_client_cert": "/.stai/mainnet/config/ssl/full_node/private_full_node.crt",
     "full_node_client_key": "/.stai/mainnet/config/ssl/full_node/private_full_node.key",
