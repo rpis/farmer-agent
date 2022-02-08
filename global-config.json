@@ -817,7 +817,7 @@
     "type": "bpx",
     "protocol": "https",
     "host": "localhost",
-    "ca_cert": "/.bpx/mainnet/config/ssl/ca/aedge_ca.crt",
+    "ca_cert": "/.bpx/mainnet/config/ssl/ca/chia_ca.crt",
     "full_node_port": 27924,
     "full_node_client_cert": "/.bpx/mainnet/config/ssl/full_node/private_full_node.crt",
     "full_node_client_key": "/.bpx/mainnet/config/ssl/full_node/private_full_node.key",
