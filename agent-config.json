@@ -1,10 +1,11 @@
 {
     "host": "farmer-agent.xiteo.usermd.net",
-    "apiKey": "",
-    "home_dir" : "/coin_home/chia",
+    "apiKey": "ag.cfed7370-8cc2-4f15-ae43-2fb8e9d83466",
+    "home_dir" : "/Users/rafal",
     "farms":[
         {
-            "farm_name" : "farm1"
+            "farm_name" : "farm1",
+            "wallet_port": 9256
         }
     ]
 }

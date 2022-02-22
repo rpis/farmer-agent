@@ -1,0 +1,7 @@
+node_modules
+package-lock.json
+coins-xch-full.csv
+build
+coins1000.csv
+.vscode
+.DS_Store
