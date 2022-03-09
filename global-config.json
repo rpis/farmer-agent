@@ -641,7 +641,7 @@
     "log_file": "/.sit/mainnet/log/debug.log",
     "mask": ". Time: \\d*.\\d*",
     "rm": ". Time: ",
-    "wallet_port": 11256
+    "wallet_port": 22256
   },
 
   {
