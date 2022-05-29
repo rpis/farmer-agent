@@ -265,7 +265,7 @@ async function processConfiguration(farms) {
           });
         const response = await get_blockchain_state(agent);
         error = response.status;
-        if (response.status == true {
+        if (response.status == true) {
         farm_state.state =
           response.blockchain_state.sync.synced == true ? 30 : 20;
         farm_state.fullNodeState =
@@ -286,7 +286,7 @@ async function processConfiguration(farms) {
         farm_state.syncTipHeight = 0;
         farm_state.space = 0;
       }
-      if (!error)
+      if (!error) {
       try {
         var agent = null;
         if (farm.configPath != undefined)
