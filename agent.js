@@ -264,8 +264,8 @@ async function processConfiguration(farms) {
             client_key: fs.readFileSync(farm.full_node_client_key),
           });
         const response = await get_blockchain_state(agent);
-        error = response.status;
-        if (response.status == true) {
+        error = response.success;
+        if (response.success == true) {
         farm_state.state =
           response.blockchain_state.sync.synced == true ? 30 : 20;
         farm_state.fullNodeState =
@@ -286,7 +286,7 @@ async function processConfiguration(farms) {
         farm_state.syncTipHeight = 0;
         farm_state.space = 0;
       }
-      if (!error) {
+      if (error) {
       try {
         var agent = null;
         if (farm.configPath != undefined)
