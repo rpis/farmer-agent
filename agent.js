@@ -247,6 +247,7 @@ async function processConfiguration(farms) {
       // get chia node status
       try {
         var agent = null;
+        var error = false;
         if (farm.configPath != undefined)
           agent = new RPCAgent({
             service: "full_node",
@@ -263,6 +264,8 @@ async function processConfiguration(farms) {
             client_key: fs.readFileSync(farm.full_node_client_key),
           });
         const response = await get_blockchain_state(agent);
+        error = response.status;
+        if (response.status == true {
         farm_state.state =
           response.blockchain_state.sync.synced == true ? 30 : 20;
         farm_state.fullNodeState =
@@ -272,6 +275,7 @@ async function processConfiguration(farms) {
         farm_state.syncTipHeight =
           response.blockchain_state.sync.sync_tip_height;
         farm_state.space = response.blockchain_state.space;
+        }
       } catch (e) {
         console.log("farmer error");
         console.log(e);
@@ -282,6 +286,7 @@ async function processConfiguration(farms) {
         farm_state.syncTipHeight = 0;
         farm_state.space = 0;
       }
+      if (!error)
       try {
         var agent = null;
         if (farm.configPath != undefined)
@@ -386,6 +391,7 @@ async function processConfiguration(farms) {
         console.log("Agent connection error + " + e);
       }
       console.log(farm_state);
+    }
     });
     await sleep(checkInterval);
   }
