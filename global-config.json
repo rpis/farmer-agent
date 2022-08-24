@@ -196,7 +196,7 @@
     "farmer_port": 9759,
     "farmer_client_cert": "/.chives/mainnet/config/ssl/farmer/private_farmer.crt",
     "farmer_client_key": "/.chives/mainnet/config/ssl/farmer/private_farmer.key",
-    "lohddcoing_file": "/.chives/mainnet/log/debug.log",
+    "log_file": "/.chives/mainnet/log/debug.log",
     "mask": ". Time: \\d*.\\d*",
     "rm": ". Time: ",
     "wallet_port": 9856
