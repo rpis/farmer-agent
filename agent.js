@@ -148,7 +148,7 @@ async function processConfiguration(farms) {
   //get farm configuration from server
   const options = {
     host: CONFIG.host,
-    path: "/v1/farm/configuration",
+    path: "/api/v1/farm/configuration",
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -362,7 +362,7 @@ async function processConfiguration(farms) {
 
       const options = {
         hostname: CONFIG.host,
-        path: "/v1/farm/status",
+        path: "/api/v1/farm/status",
         method: "POST",
         headers: {
           "Content-Type": "application/json",
